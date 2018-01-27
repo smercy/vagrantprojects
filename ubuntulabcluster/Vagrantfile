@@ -6,8 +6,8 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
-  config.vm.define "PC1" do |PC-1|
-    PC-1.vm.box = "ubuntu/trusty64"
+  config.vm.define "PC1" do |PC1|
+    PC1.vm.box = "ubuntu/trusty64"
 
     #private Network configuration
     PC1.vm.network "private_network", ip: "192.168.100.101"
