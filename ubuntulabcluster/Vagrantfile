@@ -7,13 +7,13 @@
 # you're doing.
 Vagrant.configure("2") do |config|
 
-  config.vm.define "pc-1" do |pc-1|
+  config.vm.define "pc1" do |pc1|
     pc1.vm.box = "ubuntu/trusty64"
 
     #private Network configuration
-    pc-1.vm.network "private_network", ip: "192.168.100.101"
-    pc-1.vm.provision "shell", run: "always", inline: "route del default"
-    pc-1.vm.provision "shell", run: "always", inline: "route add default gw 192.168.100.254"
+    pc1.vm.network "private_network", ip: "192.168.100.101"
+    pc1.vm.provision "shell", run: "always", inline: "route del default"
+    pc1.vm.provision "shell", run: "always", inline: "route add default gw 192.168.100.254"
 
     #Display message when the process is completed
     pc-1.vm.provision "shell", inline: "echo PC1 deployed"
