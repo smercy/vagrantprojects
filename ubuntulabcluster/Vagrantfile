@@ -6,6 +6,7 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
+
   config.vm.define "PC1" do |PC1|
     PC1.vm.box = "ubuntu/trusty64"
 
@@ -16,7 +17,7 @@ Vagrant.configure("2") do |config|
 
     #Display message when the process is completed
     PC1.vm.provision "shell", inline: "echo PC1 deployed"
-
+  end
 
 
   # Disable automatic box update checking. If you disable this, then
