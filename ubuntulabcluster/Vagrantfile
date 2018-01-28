@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
 
   end
     # Create VM and name it pc2
-  config.vm.define "pc1" do |pc2|
+  config.vm.define "pc2" do |pc2|
     pc2.vm.box = "ubuntu/trusty64"
 
     #private Network configuration
